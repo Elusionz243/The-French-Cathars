@@ -65,7 +65,7 @@ main {
   display: flex;
   flex-direction: column;
   text-align: center;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
 }
 
 .scrollbar::-webkit-scrollbar-track {
@@ -230,8 +230,12 @@ main {
 }
 
 @media screen and (max-width: 767px) {
+
+  .card-config {
+    max-height: 40vh;
+  }
   .card-body-config {
-    font-size: 1ch;
+    font-size: 1.2ch;
     padding: 5% 10% 0 5%;
     align-items: center;
   }
