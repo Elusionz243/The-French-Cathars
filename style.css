@@ -1,0 +1,281 @@
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  scroll-behavior: smooth;
+}
+
+header {
+  color: rgb(255, 0, 0);
+  -webkit-text-stroke: 1px rgb(255, 255, 0);
+  background-color: #000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 100vw;
+  width: 100%;
+  max-height: 8vh;
+  height: auto;
+  padding: 0 3%;
+  z-index: 2;
+}
+
+main {
+  background-color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-height: auto;
+  max-width: 100vw;
+  width: 100%;
+  overflow-x: hidden;
+  padding: 0;
+  margin: 0;
+}
+
+.card-container {
+  display: flex;
+  align-items: center;
+  margin: 0 !important;
+  max-width: 100vw;
+}
+
+.card-config {
+  background-color: #2a2a2a;
+  color: #fff;
+  height: 50vh;
+  max-height: 50vh;
+  display: flex;
+  align-items: center;
+  max-width: 50vw;
+  width: 50vw;
+  border: 2px solid #000;
+}
+.card-image {
+  max-height: 60%;
+  max-width: 60%;
+  align-self: center;
+  /* margin: 20px 0; */
+}
+
+.card-body-config {
+  padding: 5% 50px 0.5ch 50px;
+  overflow-y: hidden;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.scrollbar::-webkit-scrollbar-track {
+  box-shadow: none;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  background-color: #fffb00;
+}
+
+.scrollbar::-webkit-scrollbar {
+  width: 5px;
+  background-color: #fffb00;
+}
+
+.scrollbar::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  box-shadow: none;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #ff0000;
+}
+
+.footer-title {
+  border-top: none;
+  white-space: nowrap;
+}
+
+.card-title {
+  text-align: center;
+  white-space: nowrap;
+}
+
+.fs-btn {
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+}
+
+.fs-btn:hover,
+.fs-btn:focus {
+  color: rgb(9, 255, 0);
+  background-color: inherit;
+  border: none;
+  border-color: none;
+}
+
+.cathar-cross {
+  height: 0px;
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+}
+
+.cathar-cross img {
+  z-index: 1;
+  transform: scale(0.6);
+}
+
+.cathar-cross .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: rgb(255, 255, 0);
+  border: 1px solid rgb(255, 0, 0);
+  color: rgb(0, 0, 0);
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 2;
+}
+
+.cathar-cross:hover .tooltiptext {
+  visibility: visible;
+}
+
+.overlay {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 2;
+  left: 0;
+  top: 0;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.9);
+  overflow-x: hidden;
+  overflow-y: hidden;
+  transition: ease-in 0.5s;
+}
+
+.curtain-overlay {
+  position: relative;
+  z-index: 2;
+  top: 25%;
+  padding: 0 10%;
+  color: #fff;
+  max-height: 88vh;
+  height: 100%;
+  top: 30px;
+}
+
+.overlay-content {
+  max-height: 100%;
+  overflow-y: auto;
+  padding: 20px 50px 0 50px;
+  font-size: 1.2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.overlay-title {
+  text-align: center;
+  font-size: 3rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.9);
+}
+
+.overlay-card {
+  background-color: #2a2a2a;
+  max-height: 90vh;
+  height: 100%;
+}
+
+.curtain-overlay a {
+  text-decoration: none;
+  font-size: 36px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+  max-width: 100vw;
+  width: 100%;
+  left: 80vw;
+  z-index: 5;
+}
+
+.curtain-overlay a:hover,
+.curtain-overlay a:focus {
+  color: #f1f1f1;
+}
+
+.curtain-overlay .closebtn {
+  position: absolute;
+  right: 45px;
+  top: -10px;
+  font-size: 60px;
+}
+
+#video {
+  width: 0%;
+}
+
+@media screen and (max-height: 600px) {
+  .curtain-overlay a {
+    font-size: 20px;
+  }
+
+  .curtain-overlay .closebtn {
+    font-size: 40px;
+    top: -100px;
+    right: 35px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .card-body-config {
+    font-size: 1ch;
+    padding: 5% 10% 0 5%;
+    align-items: center;
+  }
+
+  .card-title,
+  .footer-title {
+    font-size: 0.8rem;
+  }
+  .cathar-cross img {
+    transform: scale(0.3);
+  }
+
+  .curtain-overlay {
+    padding: 1%;
+  }
+
+  .curtain-overlay a {
+    font-size: 15px;
+    left: 85vw;
+  }
+
+  .overlay-title {
+    white-space: nowrap;
+    font-size: 4ch;
+  }
+
+  .overlay-content {
+    padding: 1%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .card-title {
+    /* margin-right: 1%; */
+  }
+
+  .curtain-overlay .closebtn {
+    font-size: 40px;
+    top: 5px;
+    z-index: 5;
+  }
+
+  .left-logo,
+  .right-logo {
+    font-size: 2ch;
+  }
+}
