@@ -1,10 +1,11 @@
-document.getElementById("whobtn").addEventListener("click", fullscreenWho);
-document.getElementById("whatbtn").addEventListener("click", fullscreenWhat);
-document.getElementById("whybtn").addEventListener("click", fullscreenWhy);
+document.getElementById("who").addEventListener("click", fullscreenWho);
+document.getElementById("what").addEventListener("click", fullscreenWhat);
+document.getElementById("why").addEventListener("click", fullscreenWhy);
 document
-  .getElementById("learn-morebtn")
+  .getElementById("learn")
   .addEventListener("click", fullscreenLearnMore);
 document.getElementById("cathar-cross").addEventListener("click", openVideo);
+document.getElementById("Fullscreen").addEventListener("click", closeFullscreen);
 
 function fullscreenWho() {
   let content = document.getElementById("who-content").innerHTML;
@@ -46,6 +47,7 @@ function openVideo() {
   let content = document.getElementById("video").innerHTML;
   document.querySelector(".overlay-content").innerHTML = content;
   document.getElementById("Fullscreen").style.width = "100%";
+  document.querySelector(".overlay-title").style.border = "none";
 }
 
 function closeFullscreen() {
@@ -53,7 +55,9 @@ function closeFullscreen() {
     document.getElementsByTagName("video").pause();
     document.getElementById("video").style.width = "0%";
   }
-  document.querySelector(".overlay-content").innerHTML = "";
-  document.querySelector(".overlay-title").innerText = "";
   document.getElementById("Fullscreen").style.width = "0%";
+  setTimeout(() => {
+    document.querySelector(".overlay-content").innerHTML = "";
+    document.querySelector(".overlay-title").innerText = "";
+  }, 350);
 }
