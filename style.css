@@ -50,7 +50,7 @@ main {
 .card-config {
   background-color: #2a2a2a;
   color: #fff;
-  height: 50vh;
+  height: 44.5vh;
   max-height: 50vh;
   display: flex;
   align-items: center;
@@ -69,7 +69,7 @@ main {
 }
 
 .card-body-config {
-  padding: 1% 50px 0.5ch 50px;
+  padding: 1% 50px 1.75ch 50px;
   overflow-y: hidden;
   display: flex;
   flex-direction: column;
@@ -166,7 +166,7 @@ main {
 .overlay-content {
   max-height: 100%;
   overflow-y: auto;
-  padding: 20px 50px 0 50px;
+  padding: 9px 50px 0 50px;
   font-size: 1.2rem;
   display: flex;
   flex-direction: column;
@@ -176,6 +176,11 @@ main {
   text-align: center;
   font-size: 3rem;
   border-bottom: 1px solid rgba(0, 0, 0, 0.9);
+  text-decoration: underline;
+}
+
+.overlay-content .card-image {
+  margin-bottom: 15px;
 }
 
 .overlay-card {
