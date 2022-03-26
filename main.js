@@ -5,7 +5,6 @@ document
   .getElementById("learn")
   .addEventListener("click", fullscreenLearnMore);
 document.getElementById("cathar-cross").addEventListener("click", openVideo);
-document.getElementById("Fullscreen").addEventListener("click", closeFullscreen);
 
 function fullscreenWho() {
   let content = document.getElementById("who-content").innerHTML;
